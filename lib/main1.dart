@@ -1,10 +1,11 @@
-import 'dart:html';
 
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
   State<StatefulWidget> createState() {
     return MyAppState();
@@ -36,15 +37,15 @@ class MyAppState extends State<MyApp> {
         body: Column(
           children: [
             Text(question[questionumber]),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Good'),
               onPressed: annswers,
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Nice'),
               onPressed: () => print('nice'),
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('I\'m doing fine'),
               onPressed: () => print('Joey'),
             ),

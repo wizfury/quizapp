@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:quizapp/quiz.dart';
 import 'package:quizapp/result.dart';
-import './question.dart';
-import './answer.dart';
-import './quiz.dart';
-import './result.dart';
 
 // void main() {
 //   runApp(MyApp());
 // }
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
   State<StatefulWidget> createState() {
     return _MyAppState();
@@ -77,7 +75,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
-              title: Text("Quiz App"),
+              title: const Text("Quiz App"),
             ),
             body: (_questionindex < _questions.length)
                 ? Quiz(
